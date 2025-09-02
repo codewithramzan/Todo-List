@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <p>Todo List Practice 1</p>
+    <input placeholder="Todo name" class="js-name-input-simple">
+    <button onclick="addTodoSimple()">Add</button>
+
+    <p>Todo List Practice 2</p>
+    <input placeholder="Todo name" class="js-name-input-simple2">
+    <button onclick="addTodoSimple2()">Add</button>
+    <div class="js-todo-list-simple2">
+
+    </div>
+    <script>
+         
+        const TodoListSimple = [];
+        function addTodoSimple () {
+            const inputElement =
+            document.querySelector('.js-name-input-simple');
+            const name = inputElement.value;
+            TodoListSimple.push(name);
+            console.log(TodoListSimple);
+            inputElement.value = '';
+        }
+        // second practice
+        const TodoListSimple2 = [];
+        function addTodoSimple2 () {
+         const inputElement =
+            document.querySelector('.js-name-input-simple2');
+            const name = inputElement.value;
+            TodoListSimple2.push(name);
+            inputElement.value = '';
+            updateTodoList();
+       } 
+       function updateTodoList () {
+            let TodoListHTML2 = '';
+            for (let i = 0; i < TodoListSimple2.length; i++) {
+                const Todo = TodoListSimple2[i];
+                TodoListHTML2  += `<p>${Todo}</p>`;
+            }
+            document.querySelector('.js-todo-list-simple2')
+            .innerHTML = TodoListHTML2;
+       }
+      
+       
+     </script>
+</body>
+</html>
