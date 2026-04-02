@@ -62,3 +62,53 @@ body {
     padding-bottom: 10px;
     
 }
+/* RESPONSIVE */
+ @media(max-width: 800px) {
+
+  .container {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    box-shadow: none; 
+    padding-right: 20px;
+  }
+
+}
+@media (max-width: 480px) {
+    .todo-grid,
+.todo-input-grid {
+    display: grid;
+    grid-template-columns: 170px 130px 80px;
+    column-gap: 5px;
+    row-gap: 5px;
+   
+
+}
+.container{
+    padding: 0px 10px;
+}
+.add-btn,
+.delete-btn {
+    font-size: 15px;
+    background-color: green;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px black;
+   
+}
+.delete-btn {
+    background-color: darkred;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.name-input,
+.due-date-input {
+    font-size: 15px;
+    padding: 5px;
+     box-shadow: 1px 1px 4px black;
+}
+}
+
+
